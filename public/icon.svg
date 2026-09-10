@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Sfondo nero arrotondato -->
+  <rect width="512" height="512" rx="112" fill="#000000"/>
+  
+  <!-- Modulo 1: Quadrato pieno (La base) -->
+  <rect x="130" y="130" width="110" height="110" rx="24" fill="#ffffff"/>
+  
+  <!-- Modulo 2: Quadrato vuoto (Spazio per nuovi servizi) -->
+  <rect x="272" y="130" width="110" height="110" rx="24" fill="transparent" stroke="#ffffff" stroke-width="16"/>
+  
+  <!-- Modulo 3: Cerchio grande (Dinamicità) -->
+  <rect x="130" y="272" width="110" height="110" rx="55" fill="#ffffff"/>
+  
+  <!-- Modulo 4: Cerchio piccolo (Dettaglio) -->
+  <circle cx="327" cy="327" r="35" fill="#ffffff"/>
+</svg>
