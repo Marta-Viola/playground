@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 	manifest: "/manifest.json",
 	icons: {
 		icon: "/icon.svg",
-		apple: "/icon.svg"
+		apple: "/apple-icon.png"
 	},
 	appleWebApp: {
 		capable: true,
-		statusBarStyle: "black-translucent",
+		statusBarStyle: "black",
 		title: "Playground",
 	},
 };
@@ -34,7 +34,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="it">
-      		<body className={inter.className}>{children}</body>
+      		<body className={`${inter.className} bg-black text-white`}>
+				{children}
+			</body>
     	</html>
   	);
 }
