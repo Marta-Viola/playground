@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
+import BottomNav from "@/components/BottomNav";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 
 export const viewport: Viewport = {
 	themeColor: "#000000",
@@ -34,8 +36,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="it">
-      		<body className={`${inter.className} bg-black text-white`}>
-				{children}
+      		<body className={`${inter.variable} ${caveat.variable} font-sans bg-black text-white`}>
+				<main className="pb-20 min-h-screen">
+					{children}
+				</main>
+				<BottomNav />
 			</body>
     	</html>
   	);

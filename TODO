@@ -1,1 +1,50 @@
-[] tabella in DB "Essere ordinata" 
+
+1. Il Guscio e la Navigazione
+
+    1.1 titolo
+    1.2 griglia dashboard
+    1.3 sistema di navigazione
+
+2. L'Architettura dei Dati (Supabase)
+
+    2.1 definire la tabella buffers
+    2.2 definire la tabella tidy_logs
+    2.3 definire la tabella user_stats
+
+3. L'Interfaccia di Tidy (Fase 1)
+
+    3.1 Layout principale
+    3.2 componente "Target"
+    3.3 la lista dei 4 buffer
+    3.4 il bottone speciale "tutto in ordine"
+
+4. Il Motore e la Logica
+
+    4.1 logica "Ruota della fortuna"
+    4.2 funzione di validazione del PIN
+    4.3 calcolatore della Streak
+    4.4 collegamento avanzamento Streak con immagine del target
+
+# React PWA Architecure
+
+## Navigation Structure
+- App Root Router       # App Layout Layer
+    - Bottom Nav Bar    #
+        - Home Route -> Home view           # Core Navigation Views
+        - Tools Route -> Tools view         #
+        - Settings Route -> Settings View   #
+
+## Habits Module (Tidy)
+- App Root              # App Layout
+    - Bottom Nav Bar    #
+        - Home View                             # Habits Module
+            - Dashboard Cards                   #
+                - Tidy Page Component           #
+                    - Phase 1 Target Tracker    #
+
+## Future Scalability
+- App Router Layer          # Core Navigation Layer
+    - Bottom Nav Component  #
+        - Dynamic Extension -> New Tool Pages       # Future Modules
+        - Lazy Loaded Route -> Settings and Config  #
+        - Habits Module                             # Existing Modules
